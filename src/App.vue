@@ -1,7 +1,5 @@
-
 <template>
-  <Header :modal-status="modalStatus"></Header>
-  <Modal></Modal>
+  <Header></Header>
 </template>
 
 <script>

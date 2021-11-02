@@ -14,25 +14,32 @@
             </div>
         </div>
     </div>
+    <teleport to="body">
+        <Modal v-if="modalStatus" :modalStatus="modalStatus"></Modal>
+    </teleport>
 </template>
 
 <script>
+
+import { ref } from 'vue'
+import Modal from "./Modal.vue"
+
 export default {
     name: 'Header',
+    components: {
+        Modal
+    },
     setup() {
-        // function displayModal() {
-        //     console.log(modalStatus)
-        // }
+        const modalStatus = ref(false)
+
+        const displayModal = () => {
+            modalStatus.value = true;
+        }
         return {
-            // displayModal
+            modalStatus,
+            displayModal
         }
     },
-    props: ['modalStatus'],
-    methods: {
-        displayModal() {
-            console.log(modalStatus)
-        }
-    }
 }
 </script>
 
