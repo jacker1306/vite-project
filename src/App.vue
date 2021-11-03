@@ -1,20 +1,24 @@
 <template>
   <Header></Header>
+  <Banner></Banner>
+  <BestSeller></BestSeller>
 </template>
 
 <script>
 import { onUnmounted } from '@vue/runtime-core'
 import Header from './components/Header.vue'
+import Banner from './components/Banner.vue'
+import BestSeller from './components/BestSeller.vue'
 export default {
   components: {
     Header,
+    Banner,
+    BestSeller
   },
   setup() {
-    let modalStatus = false
-    console.log(modalStatus)
+    
 
     return {
-      modalStatus
     }
   }
 }
