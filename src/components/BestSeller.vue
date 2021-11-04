@@ -7,7 +7,7 @@
         </a>
         <div class="w-4/5 flex flex-wrap mx-auto justify-between items-stretch mt-8">
             <a  href="#" v-for="product in products.slice(0,4)" :key="product.id" class="w-1/5 mx-1 my-3 flex flex-col justify-between">
-                <div class="product-img flex items-center h-72">
+                <div class="product-img flex items-center h-72 overflow-hidden">
                     <img :src="product.img" :alt="product.title" :title="product.title" class="transform hover:scale-110">
                 </div>
                 <div>
