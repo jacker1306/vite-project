@@ -55,7 +55,31 @@
       "variants": "red, blue, brow]"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "fashions": [
+    {
+      "id": 1,
+      "name": "Shirt",
+      "img": "https://www.collinsdictionary.com/images/full/shirt_378037390_1000.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Trousers",
+      "img": "https://rohan.imgix.net/product/05424030.jpg?w=2500&auto=format&q=77"
+    },
+    {
+      "id": 3,
+      "name": "Shoes",
+      "img": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/b574da1d-91af-424c-8778-11590785c861/blazer-mid-77-vintage-shoe-dNWPTj.png"
+    },
+    {
+      "id": 4,
+      "name": "Suit",
+      "img": "https://www.armani.com/variants/images/17411127375636193/D/w400.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Sock",
+      "img": "https://www.armani.com/variants/images/17411127375636193/D/w400.jpg"
+    }
+  ]
 }
