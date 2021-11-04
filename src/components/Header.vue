@@ -5,7 +5,15 @@
             <a class="items-center flex" href="#"><img src="../assets/jack-logo.png" alt="" class="h-16"></a>
             <ul class="flex flex-row justify-between items-center relative tracking-wider">
                 <li class="p-6"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600" href="#">HOME</a></li>
-                <li class="p-6"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600" href="#">PRODUCTS</a></li>
+                <li class="p-6">
+                    <div class="pb-1 hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 relative products">
+                        PRODUCTS
+                        <div class="product-list hidden absolute z-1 border bg-white rounded-md py-2 px-10">
+                            <ul>
+                                <li class="my-2" v-for="fashion in fashions" :key="fashion.name"> <a class="text-black hover:text-red-600 " href="#"> {{fashion.name}} </a></li>
+                            </ul>
+                        </div>
+                    </div></li>
                 <li class="p-6"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600" href="#">ABOUT</a></li>
                 <li @click="contactModal = true" class="p-6 text-red hover:text-red-600 focus:border-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 pb-1">CONTACT US</span> </li>
                 <li class="p-6"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600" href="#">POLICIES</a></li>
@@ -78,6 +86,7 @@
 <script>
 
 import { ref } from 'vue'
+import getFashion from '../composable/getFashion'
 
 export default {
     name: 'Header',
@@ -88,6 +97,9 @@ export default {
         const contactModal = ref(false)
         const passType = ref('password')
         const condition = ref(true)
+
+        const {fashions, error, load} = getFashion()
+        load()
 
         const passToggle = () => {
             condition.value = !condition.value
@@ -102,11 +114,29 @@ export default {
             contactModal,
             passType,
             condition,
-            passToggle
+            passToggle,
+            fashions,
+            error
         }
     },
 }
 </script>
 
-<style>
+<style scoped>
+    .product-list {
+        left: -17px;
+        top: 54px;
+    }
+    .products::after {
+        content: "";
+        width: 88px;
+        height: 28px;
+        /* background-color: red; */
+        position: absolute;
+        top: 26px;
+        left: 0;
+    }
+    .products:hover .product-list{
+        display: block;
+    }
 </style>

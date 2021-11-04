@@ -3,6 +3,8 @@
   <Banner></Banner>
   <BestSeller></BestSeller>
   <FashionList></FashionList>
+  <WhyUs></WhyUs>
+  <Footer></Footer>
 </template>
 
 <script>
@@ -11,12 +13,16 @@ import Header from './components/Header.vue'
 import Banner from './components/Banner.vue'
 import BestSeller from './components/BestSeller.vue'
 import FashionList from './components/FashionList.vue'
+import WhyUs from './components/WhyUs.vue'
+import Footer from './components/Footer.vue'
 export default {
   components: {
     Header,
     Banner,
     BestSeller,
-    FashionList
+    FashionList,
+    WhyUs,
+    Footer
   },
   setup() {
     
