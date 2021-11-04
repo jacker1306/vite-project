@@ -7,7 +7,7 @@
       "hover": "https://product.hstatic.net/200000201725/product/1310__1__22dde3e469d04b2b835703012a42115c_grande.jpg",
       "description": "Fucking warm coat",
       "price": "$500",
-      "variants": "[red, blue, brown]"
+      "variants": "red, blue, brown"
     },
     {
       "id": 2,
@@ -16,7 +16,7 @@
       "hover": "https://cdn.shopify.com/s/files/1/0562/3319/7740/products/spod-1057634413-1-1_d889f585-84b1-481e-bad6-1810c54c09cc_360x.png?v=1635980618",
       "description": "Basic white hoodie",
       "price": "$47.5",
-      "variants": "[white]"
+      "variants": "white"
     },
     {
       "id": 3,
@@ -25,7 +25,7 @@
       "hover": "https://product.hstatic.net/200000201725/product/117305891_312252060132663_981159678304536855_n_bcd5c0e233e34016b6d75172a98375fa_grande.jpg",
       "description": "Slim fit denim jean",
       "price": "$88.5",
-      "variants": "[blue, black, brown]"
+      "variants": "blue, black, brown"
     },
     {
       "id": 4,
@@ -34,7 +34,7 @@
       "hover": "https://product.hstatic.net/200000201725/product/1451_cb5a0888_1c0352da6a3d4f4781cb6c13e15d83a4_grande.jpg",
       "description": "Make you as manly as possible with our boot",
       "price": "$125",
-      "variants": "[brown]"
+      "variants": "brown"
     },
     {
       "id": 5,
@@ -43,7 +43,7 @@
       "hover": "https://product.hstatic.net/200000201725/product/521194f307a34ebba0498f5087ec3688_a90802b4dbec4e55b682d5ebcaf8f551_grande.jpg",
       "description": "Your best coat",
       "price": "$112",
-      "variants": "[red, blue, brown]"
+      "variants": "red, blue, brown"
     },
     {
       "id": 6,
@@ -52,7 +52,7 @@
       "hover": "https://product.hstatic.net/200000201725/product/_nik0820_a3c0c5a96e9e43418d675b0a0f06a982_grande.jpg",
       "description": "Your best coat",
       "price": "$25",
-      "variants": "[red, blue, brown]"
+      "variants": "red, blue, brow]"
     }
   ],
   "profile": {

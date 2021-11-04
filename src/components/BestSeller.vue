@@ -6,11 +6,11 @@
     </a>
     <div class="w-4/5 flex flex-wrap mx-auto justify-between items-center mt-8">
         <a  href="#" v-for="product in products.slice(0,4)" :key="product.id" class="w-1/5 mx-1 my-3">
-            <img :src="product.img" alt="">
+            <img :src="product.img" alt="h-full">
             <p class="mt-4">{{product.description}}</p>
-            <p>{{product.price}}</p>
-            
+            <p class="text-red-600">{{product.price}}</p>
         </a>
+        <p>{{product.variants}}</p>
     </div>
 
 </template>
