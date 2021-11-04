@@ -1,20 +1,22 @@
 <template>
     <Splide :options="{ rewind: true, autoplay:true, interval: 5000, pauseOnHover: true, }">
         <SplideSlide>
-            <div class="banner1 w-full text-white bg-cover bg-center">
-                <h2 class="text-7xl py-32">BUY IT BEFORE IT'S TOO LATER</h2>
-                <p class="mx-auto text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam explicabo placeat voluptatum laboriosam, error consequatur nesciunt porro unde ex totam similique quasi! Sit fugit id dicta at mollitia quia omnis porro aliquid optio! Sunt ipsam voluptas sequi, temporibus hic voluptates provident odit doloribus cupiditate eligendi, nostrum quidem? Voluptate earum asperiores, nam, totam unde alias dolores eveniet est vel suscipit distinctio quia voluptatem, soluta laudantium? Voluptates dolor illum vel fugit accusamus optio porro atque aspernatur, eum quos quibusdam eos debitis consectetur eaque esse voluptas, deserunt tenetur architecto sint impedit accusantium sequi delectus! Qui ipsa error expedita eligendi fugiat fuga. Beatae, earum.</p>
+            <div class="banner1 w-full max-h-screen text-white bg-cover bg-center">
+                <h2 class="text-3xl md:text-4xl lg:text-5xl xl:text-7xl py-32">BUY IT BEFORE IT'S TOO LATER</h2>
+                <p class="mx-auto text-center md:text-xl lg:text-2xl">You're looking for the best store with best clothing options?<br>
+                    Lookg no more as you have found Jack Fashion!
+                </p>
                 <button class="border my-10 p-2 rounded-md text-white bg-black hover:bg-white hover:text-black">SHOP NOW</button>
             </div>
         </SplideSlide>
         <SplideSlide>
-            <div class="banner2 w-full text-white bg-cover bg-center"></div>
+            <div class="banner2 w-full max-h-screen text-white bg-cover bg-center"></div>
         </SplideSlide>
         <SplideSlide>
-            <div class="banner3 w-full text-white bg-cover bg-center"></div>
+            <div class="banner3 w-full max-h-screen text-white bg-cover bg-center"></div>
         </SplideSlide>
         <SplideSlide>
-            <div class="banner4 w-full text-white bg-cover bg-center"></div>
+            <div class="banner4 w-full max-h-screen text-white bg-cover bg-center"></div>
         </SplideSlide>
     </Splide>
 </template>

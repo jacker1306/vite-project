@@ -1,23 +1,47 @@
 <template>
     <!-- Nav -->
     <div class="header-container sticky top-0 z-10 bg-white">
-        <div class="header h-20 flex flex-row justify-between items-stretch w-4/5 mx-auto">
+        <!-- Menu on large screen -->
+        <div class="header h-20 flex flex-row justify-between items-center lg lg:w-4/5 lg:mx-auto mx-2">
             <a class="items-center flex" href="#"><img src="../assets/jack-logo.png" alt="" class="h-16"></a>
-            <ul class="flex flex-row justify-between items-center relative tracking-wider">
-                <li class="p-6"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600" href="#">HOME</a></li>
-                <li class="p-6">
-                    <div class="pb-1 hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 relative products">
+            <i @click="menuToggle" :class="menuBar" class="fas text-4xl md:hidden"></i>
+            <ul class="hidden md:flex flex-row justify-between items-center relative tracking-wider">
+                <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">HOME</a></li>
+                <li class="p-3 lg:p-4">
+                    <a class="pb-1 hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  relative products">
                         PRODUCTS
                         <div class="product-list hidden absolute z-1 border bg-white rounded-md py-2 px-10">
                             <ul>
                                 <li class="my-2" v-for="fashion in fashions" :key="fashion.name"> <a class="text-black hover:text-red-600 " href="#"> {{fashion.name}} </a></li>
                             </ul>
                         </div>
-                    </div></li>
-                <li class="p-6"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600" href="#">ABOUT</a></li>
-                <li @click="contactModal = true" class="p-6 text-red hover:text-red-600 focus:border-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 pb-1">CONTACT US</span> </li>
-                <li class="p-6"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600" href="#">POLICIES</a></li>
-                <li @click="signInModal = true" class="p-6 text-red hover:text-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 pb-1">LOGIN</span> </li>
+                    </a></li>
+                <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">ABOUT</a></li>
+                <li @click="contactModal = true" class="p-6 text-red hover:text-red-600 focus:border-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  pb-1">CONTACT US</span> </li>
+                <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">POLICIES</a></li>
+                <li @click="signInModal = true" class="p-6 text-red hover:text-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  pb-1">LOGIN</span> </li>
+            </ul>
+        </div>
+        <!-- Menu on medium screen -->
+        <div v-if="!barCond" class=" md:hidden flex flex-col border-b absolute w-full bg-white">
+            <ul class="text-center">
+                <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">HOME</a></li>
+                <li @click="subMenuCond = !subMenuCond" class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">PRODUCTS</a></li>
+                <li v-if="subMenuCond" class="p-3 lg:p-4" v-for="fashion in fashions" :key="fashion.name"><a class="text-blue-400 hover:text-red-600 " href="#"> {{fashion.name}} </a></li>
+                <!-- <li class="p-3 lg:p-4">
+                    <a class="pb-1 hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  relative products">
+                        PRODUCTS
+                        <div class="product-list hidden absolute z-1 border bg-white rounded-md py-2 px-10">
+                            <ul>
+                                <li class="my-2" v-for="fashion in fashions" :key="fashion.name"> <a class="text-black hover:text-red-600 " href="#"> {{fashion.name}} </a></li>
+                            </ul>
+                        </div>
+                    </a>
+                </li> -->
+                <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">ABOUT</a></li>
+                <li @click="contactModal = true" class="p-6 text-red hover:text-red-600 focus:border-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  pb-1">CONTACT US</span> </li>
+                <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">POLICIES</a></li>
+                <li @click="signInModal = true" class="p-6 text-red hover:text-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  pb-1">LOGIN</span> </li>
             </ul>
         </div>
     </div>
@@ -25,17 +49,17 @@
     <teleport to="body">
         <!-- Sign-in modal -->
         <div @click.self="signInModal = false" v-if="signInModal" class="fixed top-0 right-0 left-0 bottom-0 w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-gray-600 shadow-md z-10">
-            <div class="flex flex-col jus items-center bg-white w-1/3 h-96 p-1 rounded-xl">
+            <div class="flex flex-col items-center bg-white h-96 p-2 w-4/5 md:w-2/5 xl:w-1/3 rounded-xl">
                 <h2 class="text-3xl my-5 font-bold">SIGN IN</h2>
-                <div class="flex w-4/5 mx-auto mt-5">
+                <div class="text-sm flex p-1 w-full sm:w-4/5 mt-5">
                     <label class="w-1/5" for="email">Name: </label>
                     <input class="border-b pl-1 rounded-sm flex-1 outline-none" type="name" name="name" id="" placeholder="Your name">
                 </div>
-                <div class="flex w-4/5 mx-auto my-5">
+                <div class="text-sm flex p-1 w-full sm:w-4/5 my-5">
                     <label class="w-1/5" for="email">Email: </label>
                     <input class="border-b pl-1 rounded-sm flex-1 outline-none" type="email" name="email" id="" placeholder="Your email address">
                 </div>
-                <div class="flex w-4/5 mx-auto mb-5">
+                <div class="text-sm flex p-1 w-full sm:w-4/5 mb-5">
                     <label class="w-1/5" for="password">Password: </label>
                     <input class="outline-none border-b pl-1 rounded-sm flex-1" v-bind:type="passType" name="password" id="" placeholder="Your password">
                     <svg @click="passToggle" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 mt-1 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -55,19 +79,18 @@
 
         <!-- Contact Modal -->
         <div @click.self="contactModal = false" v-if="contactModal" class="fixed top-0 right-0 left-0 bottom-0 w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center text-gray-600 shadow-md z-10">
-            <div class="flex flex-col jus items-center bg-white w-1/3 h-96 p-1 rounded-xl">
+            <div class="flex flex-col jus items-center bg-white max-w-full h-96 p-1 rounded-xl">
                 <h2 class="text-3xl my-5 font-bold">CONTACT US</h2>
                 <div class="flex w-4/5 mx-auto my-5">
-                    <label class="w-1/5" for="name">Your name: </label>
+                    <label class="w-1/5 text-sm md:text-md" for="name">Your name: </label>
                     <input class="outline-none border-b pl-1 rounded-sm flex-1" type="text" name="name" id="" placeholder="Your name">
                 </div>
                 <div class="flex w-4/5 mx-auto mb-5">
-                    <label class="w-1/5" for="email">Email: </label>
+                    <label class="w-1/5 text-sm md:text-md" for="email">Email: </label>
                     <input class="outline-none border-b pl-1 rounded-sm flex-1" type="email" name="email" id="" placeholder="Your email address">
                 </div>
                 <div class="flex w-4/5 mx-auto mb-5">
-                    <label class="w-1/5" for="message">Message: </label>
-                    <!-- <input class="outline-none border-b pl-1 rounded-sm flex-1" type="text" name="message" id="" placeholder="Your message"> -->
+                    <label class="w-1/5 text-sm md:text-md" for="message">Message: </label>
                     <textarea class="border w-4/5 resize-none outline-none" name="message" id="message" cols="50" rows="3"></textarea>
                 </div>
                 <div class="flex items-center mt-0 text-sm">
@@ -98,6 +121,11 @@ export default {
         const passType = ref('password')
         const condition = ref(true)
 
+        const menuBar = ref('fa-bars')
+        const barCond = ref(true)
+
+        const subMenuCond = ref(false)
+
         const {fashions, error, load} = getFashion()
         load()
 
@@ -109,6 +137,18 @@ export default {
                 passType.value = 'password'
             }
         }
+
+        const menuToggle = () => {
+            barCond.value = !barCond.value
+            if (barCond.value) {
+                menuBar.value = 'fa-bars'
+            } else {
+                menuBar.value = 'fa-times'
+            }
+            console.log(menuBar.value)
+        }
+
+
         return {
             signInModal,
             contactModal,
@@ -116,7 +156,11 @@ export default {
             condition,
             passToggle,
             fashions,
-            error
+            error,
+            menuBar,
+            menuToggle,
+            barCond,
+            subMenuCond
         }
     },
 }
@@ -125,7 +169,7 @@ export default {
 <style scoped>
     .product-list {
         left: -17px;
-        top: 54px;
+        top: 48px;
     }
     .products::after {
         content: "";
@@ -133,7 +177,7 @@ export default {
         height: 28px;
         /* background-color: red; */
         position: absolute;
-        top: 26px;
+        top: 21px;
         left: 0;
     }
     .products:hover .product-list{

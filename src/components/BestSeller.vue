@@ -6,14 +6,14 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
         </a>
         <div class="w-4/5 flex flex-wrap mx-auto justify-between items-stretch mt-8">
-            <a  href="#" v-for="product in products.slice(0,4)" :key="product.id" class="w-1/5 mx-1 my-3 flex flex-col justify-between">
-                <div class="product-img flex items-center h-72 overflow-hidden">
+            <a  href="#" v-for="product in products.slice(0,4)" :key="product.id" class="w-full sm:w-2/5 lg:w-1/5 mx-1 my-3 flex flex-col justify-between">
+                <div class="flex justify-center items-center h-full sm:w-full md:h-48 lg:h-72 overflow-hidden">
                     <img :src="product.img" :alt="product.title" :title="product.title" class="transform hover:scale-110">
                 </div>
                 <div>
-                    <p class="mt-4">{{product.title}}</p>
-                    <p class="text-red-600">{{product.price}}</p>
-                    <p>{{product.variants}}</p>
+                    <p class="mt-4 text-sm md:text-md lg:text-xl">{{product.title}}</p>
+                    <p class="text-red-600  text-sm md:text-md">{{product.price}}</p>
+                    <p class="text-sm md:text-md">{{product.variants}}</p>
                 </div>
             </a>
         </div>
