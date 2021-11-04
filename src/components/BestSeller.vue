@@ -4,13 +4,42 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
     </a>
-
+    <div class="w-4/5 flex flex-wrap mx-auto justify-between items-center mt-8">
+        <a  href="#" v-for="product in products.slice(0,4)" :key="product.id" class="w-1/5 mx-1 my-3">
+            <img :src="product.img" alt="">
+            <p class="mt-4">{{product.description}}</p>
+            <p>{{product.price}}</p>
+            
+        </a>
+    </div>
 
 </template>
 
 <script>
+import { ref } from 'vue'
 export default {
-
+    setup() {
+        const products = ref([])
+        const productVariant = ref([])
+        const error = ref(null)
+        const load = async () => {
+            try {
+                let productData = await fetch("https://my-json-server.typicode.com/jacker1306/vite-project/products")
+                if(!productData.ok) {
+                    throw Error("Data not avaialble!")
+                }
+                products.value = await(productData.json())
+                // productVariant.value = products.
+            }
+            catch(err) {
+                error.value = err.message
+            }
+        }
+        load()
+        return {
+            products
+        }
+    }
 }
 </script>
 

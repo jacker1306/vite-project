@@ -39,13 +39,13 @@ export default {
         background-image: url(https://images.pexels.com/photos/432059/pexels-photo-432059.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
     }
     .banner2 {
-        background-image: url(https://theme.hstatic.net/200000201725/1000749045/14/slideshow_1.jpg?v=472);
+        background-image: url(https://i.pinimg.com/originals/02/cf/cf/02cfcffac595c832c514d58704cd82ce.jpg);
     }
     .banner3 {
-        background-image: url(https://theme.hstatic.net/200000201725/1000749045/14/slideshow_2.jpg?v=472);
+        background-image: url(https://i1.wp.com/tdsblog.com/wp-content/uploads/2016/02/The-Sartorial-Man-Feburary-Series-with-The-Designers-Studio.jpg?fit=1499%2C563&ssl=1);
     }
     .banner4 {
-        background-image: url(https://theme.hstatic.net/200000201725/1000749045/14/slideshow_4.jpg?v=472);
+        background-image: url(https://i.ytimg.com/vi/IeEjd08tbvU/maxresdefault.jpg);
     }
 
     p {
