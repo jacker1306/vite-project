@@ -9,15 +9,3 @@
     box-sizing: border-box;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-.fadeup {
-    width: 100px;
-    height: 100px;
-    background-color: red;
-    margin: 20px auto;
-}
-
-body {
-    width: 100vw;
-    height: 100vh;
-}

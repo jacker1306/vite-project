@@ -4,13 +4,13 @@
         <svg xmlns="http://www.w3.org/2000/svg" class="h-2 w-2 inline" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7" /></svg>
     </a>
-    <div class="w-4/5 flex flex-wrap mx-auto justify-between items-center mt-8">
+    <div class="w-4/5 flex flex-wrap mx-auto justify-between items-stretch mt-8">
         <a  href="#" v-for="product in products.slice(0,4)" :key="product.id" class="w-1/5 mx-1 my-3">
             <img :src="product.img" alt="h-full">
             <p class="mt-4">{{product.description}}</p>
             <p class="text-red-600">{{product.price}}</p>
+            <p>{{product.variants}}</p>
         </a>
-        <p>{{product.variants}}</p>
     </div>
 
 </template>
@@ -44,5 +44,8 @@ export default {
 </script>
 
 <style>
-
+    img {
+        height: 304px;
+        width: 304px;
+    }
 </style>
