@@ -1,8 +1,58 @@
 {
-  "posts": [
+  "products": [
     {
       "id": 1,
-      "title": "hello"
+      "title": "Luxury coat",
+      "img": "https://product.hstatic.net/200000201725/product/144821891_3932762760107291_1755661297107422314_n_dc79efd2b98140859ee4afb6f2815a28_grande.jpg",
+      "hover": "https://product.hstatic.net/200000201725/product/1310__1__22dde3e469d04b2b835703012a42115c_grande.jpg",
+      "description": "Your best coat",
+      "price": "$500",
+      "variants": "[red, blue, brown]"
+    },
+    {
+      "id": 2,
+      "title": "Luxury coat",
+      "img": "https://product.hstatic.net/200000201725/product/144821891_3932762760107291_1755661297107422314_n_dc79efd2b98140859ee4afb6f2815a28_grande.jpg",
+      "hover": "https://product.hstatic.net/200000201725/product/1310__1__22dde3e469d04b2b835703012a42115c_grande.jpg",
+      "description": "Your best coat",
+      "price": "$500",
+      "variants": "[red, blue, brown]"
+    },
+    {
+      "id": 3,
+      "title": "Luxury coat",
+      "img": "https://product.hstatic.net/200000201725/product/144821891_3932762760107291_1755661297107422314_n_dc79efd2b98140859ee4afb6f2815a28_grande.jpg",
+      "hover": "https://product.hstatic.net/200000201725/product/1310__1__22dde3e469d04b2b835703012a42115c_grande.jpg",
+      "description": "Your best coat",
+      "price": "$500",
+      "variants": "[red, blue, brown]"
+    },
+    {
+      "id": 4,
+      "title": "Luxury coat",
+      "img": "https://product.hstatic.net/200000201725/product/144821891_3932762760107291_1755661297107422314_n_dc79efd2b98140859ee4afb6f2815a28_grande.jpg",
+      "hover": "https://product.hstatic.net/200000201725/product/1310__1__22dde3e469d04b2b835703012a42115c_grande.jpg",
+      "description": "Your best coat",
+      "price": "$500",
+      "variants": "[red, blue, brown]"
+    },
+    {
+      "id": 5,
+      "title": "Luxury coat",
+      "img": "https://product.hstatic.net/200000201725/product/144821891_3932762760107291_1755661297107422314_n_dc79efd2b98140859ee4afb6f2815a28_grande.jpg",
+      "hover": "https://product.hstatic.net/200000201725/product/1310__1__22dde3e469d04b2b835703012a42115c_grande.jpg",
+      "description": "Your best coat",
+      "price": "$500",
+      "variants": "[red, blue, brown]"
+    },
+    {
+      "id": 6,
+      "title": "Luxury coat",
+      "img": "https://product.hstatic.net/200000201725/product/144821891_3932762760107291_1755661297107422314_n_dc79efd2b98140859ee4afb6f2815a28_grande.jpg",
+      "hover": "https://product.hstatic.net/200000201725/product/1310__1__22dde3e469d04b2b835703012a42115c_grande.jpg",
+      "description": "Your best coat",
+      "price": "$500",
+      "variants": "[red, blue, brown]"
     }
   ],
   "profile": {
