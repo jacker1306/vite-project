@@ -4,7 +4,7 @@
         <!-- Menu on large screen -->
         <div class="header h-20 flex flex-row justify-between items-center lg lg:w-4/5 lg:mx-auto mx-2">
             <a class="items-center flex" href="#"><img src="../assets/jack-logo.png" alt="" class="h-16"></a>
-            <i @click="menuToggle" :class="menuBar" class="fas text-4xl md:hidden"></i>
+            <i @click="menuToggle" :class="menuBar" class="toggle fas text-4xl md:hidden"></i>
             <ul class="hidden md:flex flex-row justify-between items-center relative tracking-wider">
                 <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">HOME</a></li>
                 <li class="p-3 lg:p-4">
@@ -23,27 +23,18 @@
             </ul>
         </div>
         <!-- Menu on medium screen -->
-        <div v-if="!barCond" class=" md:hidden flex flex-col border-b absolute w-full bg-white">
+        <div data-aos="slide-left" v-if="!barCond" class="menu md:hidden flex flex-col border-b fixed w-full bg-white">
             <ul class="text-center">
                 <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">HOME</a></li>
                 <li @click="subMenuCond = !subMenuCond" class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">PRODUCTS</a></li>
                 <li v-if="subMenuCond" class="p-3 lg:p-4" v-for="fashion in fashions" :key="fashion.name"><a class="text-blue-400 hover:text-red-600 " href="#"> {{fashion.name}} </a></li>
-                <!-- <li class="p-3 lg:p-4">
-                    <a class="pb-1 hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  relative products">
-                        PRODUCTS
-                        <div class="product-list hidden absolute z-1 border bg-white rounded-md py-2 px-10">
-                            <ul>
-                                <li class="my-2" v-for="fashion in fashions" :key="fashion.name"> <a class="text-black hover:text-red-600 " href="#"> {{fashion.name}} </a></li>
-                            </ul>
-                        </div>
-                    </a>
-                </li> -->
                 <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">ABOUT</a></li>
                 <li @click="contactModal = true" class="p-6 text-red hover:text-red-600 focus:border-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  pb-1">CONTACT US</span> </li>
                 <li class="p-3 lg:p-4"><a class="pb-1 text-red hover:text-red-600 border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl " href="#">POLICIES</a></li>
                 <li @click="signInModal = true" class="p-6 text-red hover:text-red-600 cursor-pointer"><span class="border-b border-white hover:border-red-600 focus:border-red-600 text-md lg:text-l xl:text-xl  pb-1">LOGIN</span> </li>
             </ul>
         </div>
+        
     </div>
     <!-- Teleport modal to body -->
     <teleport to="body">
@@ -145,8 +136,11 @@ export default {
             } else {
                 menuBar.value = 'fa-times'
             }
-            console.log(menuBar.value)
+            // setTimeout(() => {
+            //     barCond.value
+            // }, 1000);
         }
+
 
 
         return {
@@ -183,4 +177,5 @@ export default {
     .products:hover .product-list{
         display: block;
     }
+
 </style>
