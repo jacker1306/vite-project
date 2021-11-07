@@ -2,39 +2,39 @@
   "products": [
     {
       "id": 1,
-      "title": "Luxury coat",
-      "img": "https://product.hstatic.net/200000201725/product/144821891_3932762760107291_1755661297107422314_n_dc79efd2b98140859ee4afb6f2815a28_grande.jpg",
+      "title": "Luxury jacket",
+      "img": "https://www.pngall.com/wp-content/uploads/4/Black-Leather-Jacket-PNG-Image.png",
       "hover": "https://product.hstatic.net/200000201725/product/1310__1__22dde3e469d04b2b835703012a42115c_grande.jpg",
       "description": "Fucking warm coat",
       "price": "$500",
-      "variants": "red, blue, brown"
+      "variants": "Black, Brown"
     },
     {
       "id": 2,
-      "title": "White hoodie",
-      "img": "https://cdn.shopify.com/s/files/1/0562/3319/7740/products/spod-1057634413-1-1_120209c5-5295-4ea8-beca-c5d4beed1cf1_360x.png?v=1635980621",
+      "title": "Hoodie",
+      "img": "https://ramptshirts.com/assets/images/samples/standard-hoodies/orange.png",
       "hover": "https://cdn.shopify.com/s/files/1/0562/3319/7740/products/spod-1057634413-1-1_d889f585-84b1-481e-bad6-1810c54c09cc_360x.png?v=1635980618",
-      "description": "Basic white hoodie",
+      "description": "Basic hoodie",
       "price": "$47.5",
-      "variants": "white"
+      "variants": "Orange"
     },
     {
       "id": 3,
       "title": "Jean denim",
-      "img": "https://product.hstatic.net/200000201725/product/117640272_312251956799340_5062023156164319808_n_8fd240021add4716be17b5cc980f6726_grande.jpg",
+      "img": "https://img.cppng.com/download/2020-06/42623-2-denim-jean-free-download-png-hq.png",
       "hover": "https://product.hstatic.net/200000201725/product/117305891_312252060132663_981159678304536855_n_bcd5c0e233e34016b6d75172a98375fa_grande.jpg",
       "description": "Slim fit denim jean",
       "price": "$88.5",
-      "variants": "blue, black, brown"
+      "variants": "Blue, Black, Brown"
     },
     {
       "id": 4,
       "title": "Men boot",
-      "img": "https://product.hstatic.net/200000201725/product/1451_cb5a0842_596ce4c2688341fa817d8d52e5106e0d_grande.jpg",
+      "img": "https://www.kindpng.com/picc/m/354-3546082_men-aliexpress-ankle-boots-hd-png-download.png",
       "hover": "https://product.hstatic.net/200000201725/product/1451_cb5a0888_1c0352da6a3d4f4781cb6c13e15d83a4_grande.jpg",
       "description": "Make you as manly as possible with our boot",
       "price": "$125",
-      "variants": "brown"
+      "variants": "Brown"
     },
     {
       "id": 5,

@@ -15,6 +15,8 @@ import BestSeller from './components/BestSeller.vue'
 import FashionList from './components/FashionList.vue'
 import WhyUs from './components/WhyUs.vue'
 import Footer from './components/Footer.vue'
+
+
 export default {
   components: {
     Header,
@@ -22,7 +24,7 @@ export default {
     BestSeller,
     FashionList,
     WhyUs,
-    Footer
+    Footer,
   },
   setup() {
     
